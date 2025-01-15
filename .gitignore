@@ -169,3 +169,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+pumpit_20250115_111456.csv
+pumpit_20250115_111525.csv
+pumpit_20250115_112148.csv
+tokenmint_transaction.csv
