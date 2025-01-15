@@ -43,7 +43,7 @@ async def buy_token(token_mint, amount_sol=0.01):
                 "denominatedInSol": "true",  # Amount is in SOL
                 "slippage": 1,  # 1% slippage for buying
                 "priorityFee": PRIORITY_FEE,
-                "pool": "pump"
+                "pool": "raydium"  # Changed to use Raydium pool
             }
         )
         
@@ -70,9 +70,9 @@ async def sell_token(token_mint):
                 "mint": token_mint,
                 "amount": "100%",  # Sell all tokens
                 "denominatedInSol": "false",  # Amount is in tokens (100%)
-                "slippage": 5,  # 7% slippage as requested
+                "slippage": 5,  # 5% slippage for selling
                 "priorityFee": PRIORITY_FEE,
-                "pool": "pump"
+                "pool": "raydium"  # Changed to use Raydium pool
             }
         )
         
