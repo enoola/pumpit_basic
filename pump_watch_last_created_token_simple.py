@@ -30,7 +30,7 @@ import websockets
 
 
 API_KEY = "eh470w1patgpam2hd54nayhmct0k8w1qf1hncp236hk6cvvkf4upjp2g8554yrbrchwjpguqdxknec2ean83grkpdhtpyhae60wq4mbn6x3kjwa4ennk4ub8696mum1jb5570gjra4yku9gw5akvbdxb4pxuj9cr4cv2ccg894pewhqa1858rk65d6n4mk86n264yj26nvkuf8"
-PRIORITY_FEE = 0.009  # Default priority fee for faster transactions
+PRIORITY_FEE = 0.005  # Default priority fee for faster transactions
 
 async def buy_token(token_mint, amount_sol=0.01):
     try:
@@ -68,9 +68,9 @@ async def sell_token(token_mint):
             data={
                 "action": "sell",
                 "mint": token_mint,
-                "amount": 1,  # Sell all tokens
+                "amount": "100%",  # Sell all tokens
                 "denominatedInSol": "false",  # Amount is in tokens (100%)
-                "slippage": 7,  # 7% slippage as requested
+                "slippage": 5,  # 7% slippage as requested
                 "priorityFee": PRIORITY_FEE,
                 "pool": "pump"
             }
